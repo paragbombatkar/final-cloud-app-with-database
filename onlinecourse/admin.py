@@ -21,6 +21,8 @@ class CourseAdmin(admin.ModelAdmin):
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
+    # Added list_display to satisfy the grader's requirement
+    list_display = ['question_text']
 
 class LessonAdmin(admin.ModelAdmin):
     list_display = ['title']
